@@ -1,0 +1,71 @@
+I'm doing things a bit differently this time around.
+
+This document is just for my personal notes and pseudo-code.
+
+Todo List Requirements:
+
+    title,
+
+    description,
+
+    dueDate,
+
+    priority.
+
+
+        Optional:
+
+            notes,
+
+            checklist.
+
+What to add (personal)?
+    time (part of due date?),
+
+    date and weekday (dueDate)?
+
+    types (groceries, work, exercise, maintenance)?
+
+
+Organization:
+    Opening website should show any previously saved items on the user's list,
+    (probably made up entries as a default so I don't actually have to save user data). *TOP 
+    recommends just that, organized with a "default" list.*
+
+    TOP recommends having a "projects" organization as a way of categorizing what lists are for
+    what (like my above "types" idea), and provide user the means to choose which projects user
+    todo lists should be filed under.
+
+    Button to add new entry.
+
+    Button to remove an entry.
+
+    Button to "cross off" an entry (keeping, but showing as completed).
+    Maybe upcoming?
+
+    Should list items be automatically sorted by time, or priority (or both)?
+
+    pseudo code:
+    page title: My Todo
+
+        headline: today's date (time, too? Maybe default rather than literal). Maybe include number
+        of tasks to do? (counts all listed, ignoring tasks crossed out and deleted.)
+
+            Button with mouseClickEvent to add new project entry.
+                Creates form element when clicked with user entry fields for activity name, dueDate,
+                description, priority, notes, checklist, (and project type? Maybe with previous projects
+                as available options, i.e. meals, meetings, healthcare, etc.).
+                    Two buttons with clickEvents:
+                        Add task,
+                        Cancel.
+
+            List of items ordered by priority (and/or time).
+                mouseHoverEvent shows three symbols for edit, mark complete, and delete.
+
+What I've done so far:
+    Set up webpack with barebones files (package.json, index.js, webpack.config.js) and ran npm 
+    webpack.
+    Installed html-webpack-plugin. Added template.html file (per webpack tutorial lesson).
+    Installed CSS loaders and created styles.css file. Added import of CSS file to index.js.
+    *Note: Not adding local images at this point. Might later for icons.*
+    Installed dev-server but had errors when running npx webpack serve.
