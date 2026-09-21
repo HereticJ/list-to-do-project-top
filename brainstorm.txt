@@ -69,3 +69,5 @@ What I've done so far:
     Installed CSS loaders and created styles.css file. Added import of CSS file to index.js.
     *Note: Not adding local images at this point. Might later for icons.*
     Installed dev-server but had errors when running npx webpack serve.
+        -Fixed
+    
