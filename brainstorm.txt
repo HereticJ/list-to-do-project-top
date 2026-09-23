@@ -70,4 +70,7 @@ What I've done so far:
     *Note: Not adding local images at this point. Might later for icons.*
     Installed dev-server but had errors when running npx webpack serve.
         -Fixed
-    
+    Starting CSS structuring.
+    Rewrote several (all?) entries in index.js for better structure/clarity.
+    Removed borders and background from buttons. Will need mouse hover events.
+    Set left nav buttons to justified to the start of parent divs.
