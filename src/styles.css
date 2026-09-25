@@ -41,7 +41,61 @@ button {
 }
 
 #right {
+    display: grid;
     height: 100%;
     grid-column-start: 2;
     grid-column-end: 3;
+    grid-template-rows: 1fr 4fr 4fr;
+}
+
+#today {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#myProjects {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-template-rows: 1fr 1fr;
+}
+
+#projectList {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#listItem {
+    display: grid;
+    grid-column-Start: 1;
+    grid-column-end: 2;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#entryCheck {
+    height: 20px;
+    width: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: center;
+    justify-self: end;
+}
+
+#entryTitle {
+    margin: 0;
+    padding-left: 4px;
+    align-self: center;
+}
+
+#time {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    align-self: start;
+    justify-self: start;
+    margin: 0;
 }

@@ -1,9 +1,11 @@
-// Module that asks user to fill out a project data form when clicked.
-const taskBtn = 
+const taskBtn = document.querySelector(".addTask");
+export const hideForm = function hideForm() {
+    document.querySelector("addTask").style.display = "none";
+}
 
 // 
-taskBtn.addEventListener("click", addTask);
-    function addTask() {
-        const taskForm = document.createElement("form");
+taskBtn.addEventListener("click", addTaskForm);
+    function addTaskForm() {
+        document.querySelector("addTask").style.display = "block";
 
-    }
+};
