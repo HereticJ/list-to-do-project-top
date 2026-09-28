@@ -74,3 +74,9 @@ What I've done so far:
     Rewrote several (all?) entries in index.js for better structure/clarity.
     Removed borders and background from buttons. Will need mouse hover events.
     Set left nav buttons to justified to the start of parent divs.
+    Reworked CSS some more, added some default homepage elements to get a sense of organization.
+    Configured CSS to what I think is probably as close as I want to get for now.
+    
+    Added Team block to right pane as placeholder and copied info from todoist example. Will
+    use organization as template for creating modules (and clean up code with efficiency rather 
+    than have two separate areas with mostly identical code).

@@ -11,6 +11,9 @@ button {
 #left {
     display: grid;
     height: 100%;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding-left: 10px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-template-rows: 1fr 3fr 3fr;
@@ -20,10 +23,15 @@ button {
     justify-items: start;
 }
 
+#userBlock h4 {
+    font-size: 20px;
+}
+
 #navBlock {
     display: grid;
     grid-template-rows: repeat (5, 1fr);
     gap: 20px;
+    padding-bottom: 40px;
     justify-items: start;
 }
 
@@ -32,6 +40,10 @@ button {
     grid-template-rows: repeat (5, 1fr);
     gap: 20px;
     justify-items: start;
+}
+
+#left button {
+    font-size: 18px;
 }
 
 #leftAddTasktBtn {
@@ -43,6 +55,7 @@ button {
 #right {
     display: grid;
     height: 100%;
+    padding-left: 10px;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-template-rows: 1fr 4fr 4fr;
@@ -54,43 +67,54 @@ button {
     grid-column-end: 2;
 }
 
-#myProjects {
+#myProjectsRightHeader {
     display: grid;
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
 }
 
 #projectList {
     display: grid;
     grid-column-start: 1;
     grid-column-end: 2;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 0;
+    margin: 0;
 }
 
-#listItem {
+#projectListItem {
     display: grid;
     grid-column-Start: 1;
     grid-column-end: 2;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr;
+    justify-self: start;
+    align-self: start;
+    padding-top: 10px;
 }
 
-#entryCheck {
+#projectEntryCheckbox {
     height: 20px;
     width: 20px;
     grid-column-start: 1;
     grid-column-end: 2;
-    align-self: center;
-    justify-self: end;
+    align-self: start;
+    justify-self: center;
 }
 
-#entryTitle {
+#projectEntryTitle {
     margin: 0;
     padding-left: 4px;
     align-self: center;
 }
 
-#time {
+#projectTime {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -98,4 +122,67 @@ button {
     align-self: start;
     justify-self: start;
     margin: 0;
+    font-size: 12px;
+    color: green;
+    padding-left: 8px;
+}
+
+#teamRightHeader {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-template-rows: 1fr;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+}
+
+#teamList {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 0;
+    margin: 0;
+}
+
+#teamListItem {
+    display: grid;
+    grid-column-Start: 1;
+    grid-column-end: 2;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    justify-self: start;
+    align-self: start;
+    padding-top: 10px;
+}
+
+#teamEntryCheckbox {
+    height: 20px;
+    width: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: start;
+    justify-self: center;
+}
+
+#teamEntryTitle {
+    margin: 0;
+    padding-left: 4px;
+    align-self: center;
+}
+
+#teamTime {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    align-self: start;
+    justify-self: start;
+    margin: 0;
+    font-size: 12px;
+    color: green;
+    padding-left: 8px;
 }
