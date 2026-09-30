@@ -67,6 +67,7 @@ button {
     grid-column-end: 2;
 }
 
+/* Right Header stuff */
 #myProjectsRightHeader {
     display: grid;
     grid-column-start: 2;

@@ -62,6 +62,16 @@ Organization:
             List of items ordered by priority (and/or time).
                 mouseHoverEvent shows three symbols for edit, mark complete, and delete.
 
+Pseudo Code for creating todo logic:
+    addTaskBtn -> clickEvent -> display form with fields
+        fields: title, description, dueDate, priority, notes(optional), checklist(optional).
+            title: simple string field for a name (i.e. school out)
+            description: another simple string (i.e. pick up kids from school.)
+            dueDate: adding date-fns webpack library for adding date.
+            priority: Probably just use a simple picker with a button or drop down for high, med, low.
+            notes: Another string field most likely.
+            checklist: This would make sense for certain todos like shopping or other multi-step todos.
+
 What I've done so far:
     Set up webpack with barebones files (package.json, index.js, webpack.config.js) and ran npm 
     webpack.
@@ -80,3 +90,5 @@ What I've done so far:
     Added Team block to right pane as placeholder and copied info from todoist example. Will
     use organization as template for creating modules (and clean up code with efficiency rather 
     than have two separate areas with mostly identical code).
+
+    Added scripts to package.json for organized and faster npm build commands.
