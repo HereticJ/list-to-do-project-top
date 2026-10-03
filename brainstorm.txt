@@ -92,3 +92,6 @@ What I've done so far:
     than have two separate areas with mostly identical code).
 
     Added scripts to package.json for organized and faster npm build commands.
+
+    Fixed team area CSS issues.
+    Added HTML form and added function to task module to hide it automatically.

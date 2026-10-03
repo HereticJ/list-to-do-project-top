@@ -1,3 +1,6 @@
+import { hideForm } from "./tasks.js";
+hideForm();
+
 const taskBtn = document.createElement("button");
 taskBtn.textContent = "Add Task";
 
@@ -41,6 +44,11 @@ leftPane.appendChild(projectBlock);
         projectBlock.appendChild(projectLeftBtn1);
         projectBlock.appendChild(projectLeftBtn2);
         projectBlock.appendChild(projectLeftBtn3);
+
+
+
+
+
 
 
             
@@ -92,7 +100,7 @@ rightPane.id = "rightPane";
             rightPane.appendChild(teamEntriesList);
 
         const teamListItem = document.createElement("li");
-            teamListItem.id = "listItemTeam";
+            teamListItem.id = "teamListItem";
             teamEntriesList.appendChild(teamListItem);
 
             const teamEntryCheckbox = document.createElement("input");
