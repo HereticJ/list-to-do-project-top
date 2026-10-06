@@ -95,3 +95,6 @@ What I've done so far:
 
     Fixed team area CSS issues.
     Added HTML form and added function to task module to hide it automatically.
+
+    I'm getting the impression I need to go back and do some of the older lessons to tackle this
+    one. I think I should start with the Library project lesson, assuming I can clone the git files.
