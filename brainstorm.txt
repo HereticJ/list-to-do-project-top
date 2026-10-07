@@ -98,3 +98,6 @@ What I've done so far:
 
     I'm getting the impression I need to go back and do some of the older lessons to tackle this
     one. I think I should start with the Library project lesson, assuming I can clone the git files.
+
+    Finished Library assignment quicker than expected. Back onto this one.
+    Rewrote constructor as class in tasks.js. Adding default todo items.

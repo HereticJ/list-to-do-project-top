@@ -47,10 +47,6 @@ leftPane.appendChild(projectBlock);
 
 
 
-
-
-
-
             
 // Right hand side navigation.
 export const rightPane = document.createElement("div");
