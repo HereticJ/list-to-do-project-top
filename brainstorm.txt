@@ -100,4 +100,7 @@ What I've done so far:
     one. I think I should start with the Library project lesson, assuming I can clone the git files.
 
     Finished Library assignment quicker than expected. Back onto this one.
-    Rewrote constructor as class in tasks.js. Adding default todo items.
+    Rewrote constructor as class in tasks.js. Working on default todo items.
+
+    Wrote HTML code for todo form. Created array for user todo items. Moved hideForm function to
+    index.js.

@@ -1,8 +1,18 @@
-import { hideForm } from "./tasks.js";
+import { taskBtn } from "./index.js";
+
+// DOM element select declarations.
+const form = document.querySelector("#addTask");
+
+// Hides form until user clicks add task button.
+const hideForm = function hideForm() {
+    form.style.display = "none";
+};
+
 hideForm();
 
-const taskBtn = document.createElement("button");
-taskBtn.textContent = "Add Task";
+// Array of todo items.
+const userToDos = [];
+
 
 // Left hand side navigation.
 export const leftPane = document.createElement("div");
@@ -30,6 +40,7 @@ leftPane.id = "leftPane";
         const projectLeftBtn3 = document.createElement("button");
                 projectLeftBtn3.textContent = "Appointments";
 
+
 // Initializes structure for first visit.
 leftPane.appendChild(userBlock);
     userBlock.appendChild(userProfile);
@@ -44,7 +55,6 @@ leftPane.appendChild(projectBlock);
         projectBlock.appendChild(projectLeftBtn1);
         projectBlock.appendChild(projectLeftBtn2);
         projectBlock.appendChild(projectLeftBtn3);
-
 
 
             

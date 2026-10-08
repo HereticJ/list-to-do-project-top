@@ -19,19 +19,38 @@
             <h2>Add ToDo</h2>
                 <form id="addTask" name="addTask" method="post">
                     <legend>What Task Would You Like to Add?</legend>
-                        <label for="taskTitle">Title:</label>
+                        <label for="taskTitle">Title</label>
                             <br>
-                        <input type="text" id="taskTitle" name="tasktitle" 
-                        value="" placeholder="Task Title">
+                                <input type="text" id="taskTitle" 
+                                name="tasktitle" value="" 
+                                placeholder="Task Title">
                             <br>
-                        <input type="text" id="description" name="description"
-                        value="" placeholder="description">
                         <label for="taskDescription">Description</label>
                             <br>
-                        <input type="datetime" id="dueDate" name ="dueDate" 
-                        value="" placeholder="Due Date">
-                        <label for="dueDate">Due Date:</label>
+                                <input type="text" id="description" 
+                                name="description" value="" 
+                                placeholder="description">
                             <br>
+                        <label for="datetime">Date Time</label>
+                            <br>
+                                <input type="datetime" id="dueDate" 
+                                name="dueDate" value="" 
+                                placeholder="Due Date">
+                            <br>
+                        <label for="priority">Priority</label>
+                            <br>
+                                <input type="priority" id="priority" 
+                                name="priority" value="" placeholder="normal">
+                            <br>
+                        <label for="notes">Notes</label>
+                            <br>
+                                <input type="notes" id="notes" 
+                                name="notes" value="" placeholder="Notes">
+                            <br>
+                        <label for="checkbox">Task Complete?</label>
+                            <br>
+                                <input type="checkbox" id="checkbox" 
+                                name="checkbox" value="">
                 </form>
         </dialog>
 
