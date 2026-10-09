@@ -104,3 +104,8 @@ What I've done so far:
 
     Wrote HTML code for todo form. Created array for user todo items. Moved hideForm function to
     index.js.
+
+    Reorganizing: homepage should just have the basic elements for a first visit, with index.js
+    being more of a catch-all for the organization of modules, I think.
+        Moved hideForm function to index.js from homepage.js. Added todo arrays to homepage.js.
+        Fixed label/description mismatches in HTML.

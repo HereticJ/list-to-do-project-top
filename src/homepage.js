@@ -1,45 +1,58 @@
-import { taskBtn } from "./index.js";
+import "./styles.css";
 
-// DOM element select declarations.
-const form = document.querySelector("#addTask");
+// Creates, exports, and adds test to add task button.
+export const taskBtn = document.createElement("button");
+    taskBtn.textContent = "Add Task";
 
-// Hides form until user clicks add task button.
-const hideForm = function hideForm() {
-    form.style.display = "none";
-};
+// Left and Right side of web app.
+export const left = document.querySelector("#left");
+export const right = document.querySelector("#right");
 
-hideForm();
+// Array of projects.
+export const toDoProjects = [];
 
-// Array of todo items.
-const userToDos = [];
-
+// Team todos.
+export const toDoTeam = [];
 
 // Left hand side navigation.
 export const leftPane = document.createElement("div");
-leftPane.id = "leftPane";
-    const userBlock = document.createElement("div");
+    leftPane.id = "leftPane";
+
+// Div for User Profile buttons/name.
+const userBlock = document.createElement("div");
     userBlock.id = "userBlock";
-        const userProfile = document.createElement("h4");
-            userProfile.textContent = "Default User";
+
+// Default User name declaration.
+const userProfile = document.createElement("h4");
+    userProfile.textContent = "Default User";
+
+// Div for Left-hand navigation elements.
+const navBlock = document.createElement("div");
+navBlock.id = "navBlock";
+
+const todayBtn = document.createElement("button");
+    todayBtn.textContent = "Today";
     
-    const navBlock = document.createElement("div");
-    navBlock.id = "navBlock";
-        const todayBtn = document.createElement("button");
-            todayBtn.textContent = "Today";
-        const upcomingBtn = document.createElement("button");
-            upcomingBtn.textContent = "Upcoming";
+const upcomingBtn = document.createElement("button");
+    upcomingBtn.textContent = "Upcoming";
 
-    const projectBlock = document.createElement("div");
+const projectBlock = document.createElement("div");
     projectBlock.id = "projectBlock";
-        const projectsLeftHeaderBtn = document.createElement("button");
-            projectsLeftHeaderBtn.textContent = "My Projects";
-        const projectLeftBtn1 = document.createElement("button");
-            projectLeftBtn1.textContent = "Fitness";
-        const projectLeftBtn2 = document.createElement("button");
-            projectLeftBtn2.textContent = "Groceries";
-        const projectLeftBtn3 = document.createElement("button");
-                projectLeftBtn3.textContent = "Appointments";
 
+const projectsLeftHeaderBtn = document.createElement("button");
+    projectsLeftHeaderBtn.textContent = "My Projects";
+
+const projectLeftBtn1 = document.createElement("button");
+    projectLeftBtn1.textContent = "Fitness";
+
+const projectLeftBtn2 = document.createElement("button");
+    projectLeftBtn2.textContent = "Groceries";
+    
+const projectLeftBtn3 = document.createElement("button");
+        projectLeftBtn3.textContent = "Appointments";
+
+toDoProjects.push(projectBlock, projectsLeftHeaderBtn, projectLeftBtn1, 
+    projectLeftBtn2, projectLeftBtn3);
 
 // Initializes structure for first visit.
 leftPane.appendChild(userBlock);
@@ -56,8 +69,6 @@ leftPane.appendChild(projectBlock);
         projectBlock.appendChild(projectLeftBtn2);
         projectBlock.appendChild(projectLeftBtn3);
 
-
-            
 // Right hand side navigation.
 export const rightPane = document.createElement("div");
 rightPane.id = "rightPane";
@@ -66,15 +77,15 @@ rightPane.id = "rightPane";
         headline.textContent = "Today";
             rightPane.appendChild(headline);
 
-    // Block for My Projects in right pane.
-    const projectsRightHeader = document.createElement("h4");
-    projectsRightHeader.id = "myProjectsRightHeader";
-        projectsRightHeader.textContent = "My Projects";
-            rightPane.appendChild(projectsRightHeader);
+// Block for My Projects in right pane.
+const projectsRightHeader = document.createElement("h4");
+projectsRightHeader.id = "myProjectsRightHeader";
+    projectsRightHeader.textContent = "My Projects";
+        rightPane.appendChild(projectsRightHeader);
 
-        const projectEntriesList = document.createElement("ul");
-        projectEntriesList.id = "projectList";
-            rightPane.appendChild(projectEntriesList);
+    const projectEntriesList = document.createElement("ul");
+    projectEntriesList.id = "projectList";
+        rightPane.appendChild(projectEntriesList);
 
         const projectListItem = document.createElement("li");
             projectListItem.id = "projectListItem";
@@ -123,3 +134,15 @@ rightPane.id = "rightPane";
                 teamListTime.id = "teamTime";
                 teamListItem.appendChild(teamListTime);
                     teamListTime.textContent = "2:00 PM";
+
+left.appendChild(leftPane);
+right.appendChild(rightPane);
+
+
+
+
+
+
+
+            
+

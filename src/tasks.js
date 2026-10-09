@@ -1,3 +1,5 @@
+import taskBtn from "./homepage.js";
+import toDoProjects from "./homepage.js";
 
 class toDo {
     // class methods
@@ -13,6 +15,8 @@ class toDo {
 
 // Starting todo tasks.
 const task1 = new toDo("Do 30 mins of yoga.", "", "7:30 AM", "", "", "");
+
+toDoProjects.push(task1);
 
 /*
 // Block for My Projects in right pane.

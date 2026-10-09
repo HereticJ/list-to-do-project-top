@@ -1,13 +1,12 @@
-// Task button.
-export const taskBtn = document.createElement("button");
-    taskBtn.textContent = "Add Task";
+// DOM element select declarations.
+const form = document.querySelector("#addTask");
 
-import "./styles.css";
-import { leftPane, rightPane } from "./homepage.js";
+// Hides form until user clicks add task button.
+const hideForm = function hideForm() {
+    form.style.display = "none";
+};
 
-const left = document.querySelector("#left");
-const right = document.querySelector("#right");
+hideForm();
 
-left.appendChild(leftPane);
-right.appendChild(rightPane);
+
 

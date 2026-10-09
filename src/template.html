@@ -8,56 +8,67 @@
 <body>
     <div id="main">
 
-        <form action="/action.php" method="post" id="addTask">
-            <input type="text" id="taskTitle" name="taskTitle" 
-            placeholder="Task Title" />
-            <input type="text" id="taskDescription" name="taskDescription" 
-            placeholder="task description" />
-        </form>
+        <div id="left"></div>
+        <div id="right"></div>
 
         <dialog id="addToDo">
             <h2>Add ToDo</h2>
                 <form id="addTask" name="addTask" method="post">
+                    <p>
                     <legend>What Task Would You Like to Add?</legend>
                         <label for="taskTitle">Title</label>
                             <br>
-                                <input type="text" id="taskTitle" 
-                                name="tasktitle" value="" 
-                                placeholder="Task Title">
+
+                        <input type="text" id="taskTitle" 
+                            name="tasktitle" value="" placeholder="Task Title">
                             <br>
+
                         <label for="taskDescription">Description</label>
                             <br>
-                                <input type="text" id="description" 
-                                name="description" value="" 
-                                placeholder="description">
+
+                        <input type="text" id="taskDescription" 
+                            name="taskDescription" value="" 
+                            placeholder="Task Description">
                             <br>
-                        <label for="datetime">Date Time</label>
+
+                        <label for="dateTime">Date Time</label>
                             <br>
-                                <input type="datetime" id="dueDate" 
-                                name="dueDate" value="" 
-                                placeholder="Due Date">
+
+                            <input type="dateTime" id="dateTime" 
+                                name="dateTime" value="" placeholder="Due Date">
                             <br>
+
                         <label for="priority">Priority</label>
                             <br>
-                                <input type="priority" id="priority" 
-                                name="priority" value="" placeholder="normal">
+
+                        <input type="priority" id="priority" 
+                            name="priority" value="" placeholder="normal">
                             <br>
+
                         <label for="notes">Notes</label>
                             <br>
-                                <input type="notes" id="notes" 
-                                name="notes" value="" placeholder="Notes">
+
+                        <input type="notes" id="notes" 
+                            name="notes" value="" placeholder="Notes">
                             <br>
+
                         <label for="checkbox">Task Complete?</label>
                             <br>
-                                <input type="checkbox" id="checkbox" 
-                                name="checkbox" value="">
+
+                        <input type="checkbox" id="checkbox" 
+                            name="checkbox" value="">
+                    </p>
+
+                    <div>
+                        <button type="submit" id="submitToDo" 
+                        value="submitToDo">Submit</button>
+
+                        <button type="cancel" id="cancel" value="cancel" 
+                        formmethod="dialog">Cancel</button>
+                    </div>
                 </form>
         </dialog>
 
-        <div id="left">
-        </div>
-        <div id="right">
-        </div>
     </div>
 </body>
 </html>
