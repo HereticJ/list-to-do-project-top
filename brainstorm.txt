@@ -36,9 +36,9 @@ Organization:
     what (like my above "types" idea), and provide user the means to choose which projects user
     todo lists should be filed under.
 
-    Button to add new entry.
+    Button to add new entry (coded in tasks.js module).
 
-    Button to remove an entry.
+    Button to remove an entry (coded in remove.js module).
 
     Button to "cross off" an entry (keeping, but showing as completed).
     Maybe upcoming?
@@ -46,23 +46,30 @@ Organization:
     Should list items be automatically sorted by time, or priority (or both)?
 
     pseudo code:
-    page title: My Todo
 
-        headline: today's date (time, too? Maybe default rather than literal). Maybe include number
-        of tasks to do? (counts all listed, ignoring tasks crossed out and deleted.)
+    homepage.js:
+    left side w/list items structure.
+        Default User w/dropdown, notifications, sidebar toggle.
+            Import add task logic from index.js (unhides form and adds user input 
+            into new task using form data).
+            Dummy search button, inbox (or just don't include).
+            Today button using date data (assuming I can do that).
+            Upcoming using date data (ditto).
 
-            Button with mouseClickEvent to add new project entry.
-                Creates form element when clicked with user entry fields for activity name, dueDate,
-                description, priority, notes, checklist, (and project type? Maybe with previous projects
-                as available options, i.e. meals, meetings, healthcare, etc.).
-                    Two buttons with clickEvents:
-                        Add task,
-                        Cancel.
+    right side w/items structure.
+        Headline with Today header.
+            My Projects list.
+                Add task button w/import add task logic from index.js.
+                Import remove task button w/logic from remove.js (Allows user to 
+                remove tasks without completing them).
+                *Import edit task logic from edit.js (Allows user to alter existing 
+                tasks (*might be too much for this project)).
 
-            List of items ordered by priority (and/or time).
-                mouseHoverEvent shows three symbols for edit, mark complete, and delete.
+            Team tasks list.
+                Same as projects.
 
-Pseudo Code for creating todo logic:
+Add Task tasks.js
+    Pseudo Code for creating todo logic:
     addTaskBtn -> clickEvent -> display form with fields
         fields: title, description, dueDate, priority, notes(optional), checklist(optional).
             title: simple string field for a name (i.e. school out)
@@ -109,3 +116,10 @@ What I've done so far:
     being more of a catch-all for the organization of modules, I think.
         Moved hideForm function to index.js from homepage.js. Added todo arrays to homepage.js.
         Fixed label/description mismatches in HTML.
+
+    Back after a hard week.
+        Moving tasksBtn to tasks.js from homepage.js
+        Moved todo arrays to index.js from homepage.js.
+        Edited above pseudocode.
+        Moved upcoming and today buttons to tasks.js from homepage.js.
+

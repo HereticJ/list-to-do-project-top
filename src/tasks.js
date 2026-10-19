@@ -1,5 +1,12 @@
-import taskBtn from "./homepage.js";
-import toDoProjects from "./homepage.js";
+// Creates, exports, and adds test to add task button.
+export const taskBtn = document.createElement("button");
+    taskBtn.textContent = "Add Task";
+
+export const todayBtn = document.createElement("button");
+    todayBtn.textContent = "Today";
+    
+export const upcomingBtn = document.createElement("button");
+    upcomingBtn.textContent = "Upcoming";
 
 class toDo {
     // class methods

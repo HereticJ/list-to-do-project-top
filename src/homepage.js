@@ -1,40 +1,22 @@
 import "./styles.css";
-
-// Creates, exports, and adds test to add task button.
-export const taskBtn = document.createElement("button");
-    taskBtn.textContent = "Add Task";
+import { taskBtn } from "./tasks.js";
+import { defaultUser, toDoProjects, toDoTeam } from "./index.js";
 
 // Left and Right side of web app.
 export const left = document.querySelector("#left");
 export const right = document.querySelector("#right");
-
-// Array of projects.
-export const toDoProjects = [];
-
-// Team todos.
-export const toDoTeam = [];
 
 // Left hand side navigation.
 export const leftPane = document.createElement("div");
     leftPane.id = "leftPane";
 
 // Div for User Profile buttons/name.
-const userBlock = document.createElement("div");
+export const userBlock = document.createElement("div");
     userBlock.id = "userBlock";
 
-// Default User name declaration.
-const userProfile = document.createElement("h4");
-    userProfile.textContent = "Default User";
-
 // Div for Left-hand navigation elements.
-const navBlock = document.createElement("div");
-navBlock.id = "navBlock";
-
-const todayBtn = document.createElement("button");
-    todayBtn.textContent = "Today";
-    
-const upcomingBtn = document.createElement("button");
-    upcomingBtn.textContent = "Upcoming";
+export const navBlock = document.createElement("div");
+    navBlock.id = "navBlock";
 
 const projectBlock = document.createElement("div");
     projectBlock.id = "projectBlock";
@@ -42,21 +24,11 @@ const projectBlock = document.createElement("div");
 const projectsLeftHeaderBtn = document.createElement("button");
     projectsLeftHeaderBtn.textContent = "My Projects";
 
-const projectLeftBtn1 = document.createElement("button");
-    projectLeftBtn1.textContent = "Fitness";
-
-const projectLeftBtn2 = document.createElement("button");
-    projectLeftBtn2.textContent = "Groceries";
-    
-const projectLeftBtn3 = document.createElement("button");
-        projectLeftBtn3.textContent = "Appointments";
-
-toDoProjects.push(projectBlock, projectsLeftHeaderBtn, projectLeftBtn1, 
-    projectLeftBtn2, projectLeftBtn3);
+toDoProjects.push(projectBlock, projectsLeftHeaderBtn);
 
 // Initializes structure for first visit.
 leftPane.appendChild(userBlock);
-    userBlock.appendChild(userProfile);
+    userBlock.appendChild(defaultUser);
 
 leftPane.appendChild(navBlock);
     navBlock.appendChild(taskBtn);
