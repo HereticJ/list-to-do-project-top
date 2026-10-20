@@ -1,12 +1,12 @@
-// Creates, exports, and adds test to add task button.
-export const taskBtn = document.createElement("button");
-    taskBtn.textContent = "Add Task";
-
-export const todayBtn = document.createElement("button");
+// Creates, exports, and adds text to add task buttons.
+export const addTaskBtn = document.createElement("button");
+    addTaskBtn.textContent = "Add Task";
+export const leftBtns = [];
+const todayBtn = document.createElement("button");
     todayBtn.textContent = "Today";
-    
-export const upcomingBtn = document.createElement("button");
+const upcomingBtn = document.createElement("button");
     upcomingBtn.textContent = "Upcoming";
+leftBtns.push(addTaskBtn, todayBtn, upcomingBtn);
 
 class toDo {
     // class methods

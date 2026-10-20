@@ -1,10 +1,9 @@
 import "./styles.css";
-import { taskBtn } from "./tasks.js";
+import { leftBtns } from "./tasks.js";
 import { defaultUser, toDoProjects, toDoTeam } from "./index.js";
 
-// Left and Right side of web app.
+// Left side of web app.
 export const left = document.querySelector("#left");
-export const right = document.querySelector("#right");
 
 // Left hand side navigation.
 export const leftPane = document.createElement("div");
@@ -18,42 +17,76 @@ export const userBlock = document.createElement("div");
 export const navBlock = document.createElement("div");
     navBlock.id = "navBlock";
 
+// Div for Left-hand My Projects block.
 const projectBlock = document.createElement("div");
     projectBlock.id = "projectBlock";
 
+// Left-hand My Projects Header.
 const projectsLeftHeaderBtn = document.createElement("button");
     projectsLeftHeaderBtn.textContent = "My Projects";
 
+// adds projectBlock and Left My Projects header to toDoProjects array.
 toDoProjects.push(projectBlock, projectsLeftHeaderBtn);
 
-// Initializes structure for first visit.
+const teamBlock = document.createElement("div");
+    teamBlock.id = "teamBlock";
+
+const teamLeftheaderBtn = document.createElement("button")
+    teamLeftheaderBtn.textContent = "Team";
+
+// Initializes left hand structure for first visit.
 leftPane.appendChild(userBlock);
     userBlock.appendChild(defaultUser);
-
+// Appends navBlock to left-hand side and appends leftBtns array items.
 leftPane.appendChild(navBlock);
-    navBlock.appendChild(taskBtn);
-    navBlock.appendChild(todayBtn);
-    navBlock.appendChild(upcomingBtn);
-
+    navBlock.appendChild(leftBtns[0], leftBtns[1], leftBtns[2]);
+// Appends My Projects to left-hand navBlock with toDoProjects array items.
 leftPane.appendChild(projectBlock);
     projectBlock.appendChild(projectsLeftHeaderBtn);
-        projectBlock.appendChild(projectLeftBtn1);
-        projectBlock.appendChild(projectLeftBtn2);
-        projectBlock.appendChild(projectLeftBtn3);
+        projectBlock.appendChild(toDoProjects[0], toDoProjects[1],toDoProjects[2]);
+// Appends Teamblock with toDoTeam array items.
+leftPane.appendChild(teamBlock)
+    teamBlock.appendChild(teamLeftHeaderBtn);    
+        teamBlock.appendChild(toDoTeam[0], toDoTeam[1], toDoTeam[2]);
+
+left.appendChild(leftPane);
+
+
+
+
+// Right side of web app. 
+export const right = document.querySelector("#right");
 
 // Right hand side navigation.
-export const rightPane = document.createElement("div");
-rightPane.id = "rightPane";
-    const headline = document.createElement("h1");
-    headline.id = "headline";
-        headline.textContent = "Today";
-            rightPane.appendChild(headline);
+const rightPane = document.createElement("div");
+    rightPane.id = "rightPane";
+// Headline for Today section.
+const headlineToday = document.createElement("h1");
+headlineToday.id = "headlineToday";
+    headlineToday.textContent = "Today";
+        rightPane.appendChild(headlineToday);
 
 // Block for My Projects in right pane.
 const projectsRightHeader = document.createElement("h4");
-projectsRightHeader.id = "myProjectsRightHeader";
+projectsRightHeader.id = "projectsRightHeader";
     projectsRightHeader.textContent = "My Projects";
         rightPane.appendChild(projectsRightHeader);
+
+
+
+class projectTask {
+    constructor(projectListItem, projectListCheckbox, projectListTitle, projectListTime) {
+        this.projectListItem = projectListItem,
+        this.projectListCheckbox = projectListCheckbox,
+        this.projectListTitle = projectListTitle,
+        this.projectListTime = projectListTime
+    };
+};
+const myProjects = [];
+
+// Default My Project Tasks.
+const myProjectTask1 = new projectTask("item1", false, "Fitness", "7:30 AM");
+myProjects.push (myProjectTask1);
 
     const projectEntriesList = document.createElement("ul");
     projectEntriesList.id = "projectList";
@@ -107,7 +140,6 @@ projectsRightHeader.id = "myProjectsRightHeader";
                 teamListItem.appendChild(teamListTime);
                     teamListTime.textContent = "2:00 PM";
 
-left.appendChild(leftPane);
 right.appendChild(rightPane);
 
 

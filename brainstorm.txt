@@ -123,3 +123,8 @@ What I've done so far:
         Edited above pseudocode.
         Moved upcoming and today buttons to tasks.js from homepage.js.
 
+    Reorganized a lot of code, added arrays for efficiency in index.js for left-hand nav buttons,
+    changed taskBtn to addTaskBtn and removed it from leftBtns array for better clarity, changed
+    myProjectsRightHeader id to projectsRightHeader, translating basic default my project tasks
+    into a class for tasks.
+
