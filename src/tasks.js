@@ -20,6 +20,8 @@ class toDo {
     }
 };
 
+
+
 // Starting todo tasks.
 const task1 = new toDo("Do 30 mins of yoga.", "", "7:30 AM", "", "", "");
 
