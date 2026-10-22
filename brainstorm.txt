@@ -128,3 +128,12 @@ What I've done so far:
     myProjectsRightHeader id to projectsRightHeader, translating basic default my project tasks
     into a class for tasks.
 
+    I'm working out how best to take todo data and append them to the DOM, structured in such a
+    way that it functions with default todos I've provided as well as user todos. So far I've 
+    moved the constructor to index.js from homepage since I just want everything in homepage.js 
+    to be focused solely on the structure of the page itself, with index.js supplying the data 
+    that gets filled into those structures, and tasks.js providing the means to create the todos. 
+    I'm hoping that will satisfy the single responsibility principle.
+    In other words: tasks > index > homepage. It's a little confusing since I feel that keeping 
+    default values in index.js makes more sense than in tasks.js, since they aren't using any todo 
+    forms as part of their creation.

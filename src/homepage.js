@@ -74,19 +74,7 @@ projectsRightHeader.id = "projectsRightHeader";
 
 
 
-class projectTask {
-    constructor(projectListItem, projectListCheckbox, projectListTitle, projectListTime) {
-        this.projectListItem = projectListItem,
-        this.projectListCheckbox = projectListCheckbox,
-        this.projectListTitle = projectListTitle,
-        this.projectListTime = projectListTime
-    };
-};
-const myProjects = [];
 
-// Default My Project Tasks.
-const myProjectTask1 = new projectTask("item1", false, "Fitness", "7:30 AM");
-myProjects.push (myProjectTask1);
 
     const projectEntriesList = document.createElement("ul");
     projectEntriesList.id = "projectList";
