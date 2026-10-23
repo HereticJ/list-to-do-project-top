@@ -137,3 +137,6 @@ What I've done so far:
     In other words: tasks > index > homepage. It's a little confusing since I feel that keeping 
     default values in index.js makes more sense than in tasks.js, since they aren't using any todo 
     forms as part of their creation.
+
+    Added default tasks to tasks.js. Added task category constructor (i.e. My Projects, Team) to 
+    asks.js. Commented all the tasks.js lines of code (the lines that exist at the moment)

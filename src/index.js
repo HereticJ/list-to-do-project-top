@@ -1,5 +1,5 @@
 import { userBlock, navBlock } from "./homepage.js";
-import { addTaskBtn } from "./index.js";
+import { addTaskBtn, projectTaskDefaults } from "./tasks.js";
 
 // Takes task data and appends them to a given list
 class toDoList {
@@ -9,8 +9,6 @@ class toDoList {
         this.addTask = addTask
     };
 };
-
-const myProjects = new toDoList("My Projects", "[2]", addTaskBtn);
 
 // Array of projects.
 export const toDoProjects = [];
@@ -38,10 +36,9 @@ toDoTeam.push(teamBtn1, teamBtn2, teamBtn3);
 export const defaultUser = document.createElement("h4");
     defaultUser.textContent = "Default";
 
-
-// Default My Project Tasks.
-const projectTaskDefault1 = new projectTask("item1", false, "Fitness", "7:30 AM");
-toDoProjects.push(projectTaskDefault1); 
+// Creates default todo list categories.
+const myProjects = new toDoList("My Projects", [2], addTaskBtn);
+const team = new toDoList("Team", [2], addTaskBtn);
 
 // DOM element select declarations.
 const form = document.querySelector("#addTask");
@@ -50,7 +47,6 @@ const form = document.querySelector("#addTask");
 const hideForm = function hideForm() {
     form.style.display = "none";
 };
-
 hideForm();
 
 
