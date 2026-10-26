@@ -140,3 +140,6 @@ What I've done so far:
 
     Added default tasks to tasks.js. Added task category constructor (i.e. My Projects, Team) to 
     asks.js. Commented all the tasks.js lines of code (the lines that exist at the moment)
+
+    Removed leftPane and rightPane entries from homepage, removed code in index.js to create 
+    categories and inserted it into its own module (category.js), moved nav buttons to index.js, 

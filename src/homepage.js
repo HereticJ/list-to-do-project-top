@@ -1,23 +1,20 @@
 import "./styles.css";
 import { leftBtns } from "./tasks.js";
 import { defaultUser, toDoProjects, toDoTeam } from "./index.js";
+import { myProjectCategory, teamCategory } from "./category.js";
 
-// Left side of web app.
-export const left = document.querySelector("#left");
+// Left side.
+const left = document.querySelector("#left");
 
-// Left hand side navigation.
-export const leftPane = document.createElement("div");
-    leftPane.id = "leftPane";
-
-// Div for User Profile buttons/name.
-export const userBlock = document.createElement("div");
+// User Profile buttons/name.
+const userBlock = document.createElement("div");
     userBlock.id = "userBlock";
 
-// Div for Left-hand navigation elements.
-export const navBlock = document.createElement("div");
+// Left-hand navigation elements.
+const navBlock = document.createElement("div");
     navBlock.id = "navBlock";
 
-// Div for Left-hand My Projects block.
+// Left-hand My Projects block.
 const projectBlock = document.createElement("div");
     projectBlock.id = "projectBlock";
 
@@ -35,50 +32,41 @@ const teamLeftheaderBtn = document.createElement("button")
     teamLeftheaderBtn.textContent = "Team";
 
 // Initializes left hand structure for first visit.
-leftPane.appendChild(userBlock);
+left.appendChild(userBlock);
     userBlock.appendChild(defaultUser);
+
 // Appends navBlock to left-hand side and appends leftBtns array items.
-leftPane.appendChild(navBlock);
+left.appendChild(navBlock);
     navBlock.appendChild(leftBtns[0], leftBtns[1], leftBtns[2]);
+
 // Appends My Projects to left-hand navBlock with toDoProjects array items.
-leftPane.appendChild(projectBlock);
+left.appendChild(projectBlock);
     projectBlock.appendChild(projectsLeftHeaderBtn);
         projectBlock.appendChild(toDoProjects[0], toDoProjects[1],toDoProjects[2]);
+
 // Appends Teamblock with toDoTeam array items.
-leftPane.appendChild(teamBlock)
+left.appendChild(teamBlock)
     teamBlock.appendChild(teamLeftHeaderBtn);    
         teamBlock.appendChild(toDoTeam[0], toDoTeam[1], toDoTeam[2]);
 
-left.appendChild(leftPane);
-
-
-
-
 // Right side of web app. 
-export const right = document.querySelector("#right");
+const right = document.querySelector("#right");
 
-// Right hand side navigation.
-const rightPane = document.createElement("div");
-    rightPane.id = "rightPane";
 // Headline for Today section.
 const headlineToday = document.createElement("h1");
 headlineToday.id = "headlineToday";
     headlineToday.textContent = "Today";
-        rightPane.appendChild(headlineToday);
+        right.appendChild(headlineToday);
 
 // Block for My Projects in right pane.
 const projectsRightHeader = document.createElement("h4");
 projectsRightHeader.id = "projectsRightHeader";
     projectsRightHeader.textContent = "My Projects";
-        rightPane.appendChild(projectsRightHeader);
-
-
-
-
+        right.appendChild(projectsRightHeader);
 
     const projectEntriesList = document.createElement("ul");
     projectEntriesList.id = "projectList";
-        rightPane.appendChild(projectEntriesList);
+        right.appendChild(projectEntriesList);
 
         const projectListItem = document.createElement("li");
             projectListItem.id = "projectListItem";
@@ -103,11 +91,11 @@ projectsRightHeader.id = "projectsRightHeader";
     const teamRightHeader = document.createElement("h4");
     teamRightHeader.id = "teamRightHeader";
         teamRightHeader.textContent = "Team";
-            rightPane.appendChild(teamRightHeader);
+            right.appendChild(teamRightHeader);
 
         const teamEntriesList = document.createElement("ul");
         teamEntriesList.id = "teamList";
-            rightPane.appendChild(teamEntriesList);
+            right.appendChild(teamEntriesList);
 
         const teamListItem = document.createElement("li");
             teamListItem.id = "teamListItem";
@@ -127,8 +115,6 @@ projectsRightHeader.id = "projectsRightHeader";
                 teamListTime.id = "teamTime";
                 teamListItem.appendChild(teamListTime);
                     teamListTime.textContent = "2:00 PM";
-
-right.appendChild(rightPane);
 
 
 
