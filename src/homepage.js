@@ -1,10 +1,9 @@
 import "./styles.css";
-import { leftBtns } from "./tasks.js";
-import { defaultUser, toDoProjects, toDoTeam } from "./index.js";
-import { myProjectCategory, teamCategory } from "./category.js";
+import { leftBtns, defaultUser, toDoProjects, toDoTeam } from "./index.js";
+import { myProjectsCategory, teamCategory } from "./category.js";
 
 // Left side.
-const left = document.querySelector("#left");
+export const left = document.querySelector("#left");
 
 // User Profile buttons/name.
 const userBlock = document.createElement("div");
@@ -50,7 +49,7 @@ left.appendChild(teamBlock)
         teamBlock.appendChild(toDoTeam[0], toDoTeam[1], toDoTeam[2]);
 
 // Right side of web app. 
-const right = document.querySelector("#right");
+export const right = document.querySelector("#right");
 
 // Headline for Today section.
 const headlineToday = document.createElement("h1");

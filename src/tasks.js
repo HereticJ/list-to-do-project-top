@@ -23,3 +23,13 @@ const dProjectTask3 = new toDo("Buy bread", "", "low", false, "", false,
 
 // Add default My Project todo items to the My Project array.
 projectTasks.push(dProjectTask1, dProjectTask2, dProjectTask3);
+
+// Team tasks.
+export const teamTasks = [];
+
+// Default Team todo items.
+const dTeamTask = new toDo("Plan user resarch sessions", "2:00 PM", "high", 
+    "", false, "Website Update"
+);
+
+teamTasks.push(dTeamTask);
