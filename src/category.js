@@ -1,5 +1,4 @@
-import { addTaskBtn } from "./index.js";
-import { projectTasks, teamTasks } from "./tasks.js";
+import { addTaskBtn, projectTasks, teamTasks } from "./tasks.js";
 
 // Creates new task categories for todo lists.
 class taskCategory {

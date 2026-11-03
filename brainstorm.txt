@@ -144,4 +144,8 @@ What I've done so far:
     Removed leftPane and rightPane entries from homepage, removed code in index.js to create 
     categories and inserted it into its own module (category.js), moved nav buttons to index.js
 
-    Added team default entry, added loop to index.js to create todo list with todo array, 
+    Added team default entry, added loop to index.js to create todo list with todo arrays
+
+    Wrangling modules properly with respect to index.js entry point, fixed left nav structure 
+
+    

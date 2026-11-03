@@ -1,3 +1,7 @@
+// Creates task button.
+export const addTaskBtn = document.createElement("button");
+    addTaskBtn.textContent = "Add Task";
+
 class toDo {
     // class methods
     constructor(description, dueDate, priority, notes, checklist, category) {

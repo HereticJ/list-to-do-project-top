@@ -1,55 +1,41 @@
 import "./styles.css";
 import { leftBtns, defaultUser, toDoProjects, toDoTeam } from "./index.js";
+import { addTaskBtn, projectTasks, teamTasks } from "./tasks.js";
 import { myProjectsCategory, teamCategory } from "./category.js";
+
+export const form = document.querySelector("#addTask");
+
+export const main = document.querySelector("#main");
 
 // Left side.
 export const left = document.querySelector("#left");
 
+// Right side of web app. 
+export const right = document.querySelector("#right");
+
 // User Profile buttons/name.
-const userBlock = document.createElement("div");
+export const userBlock = document.createElement("div");
     userBlock.id = "userBlock";
 
 // Left-hand navigation elements.
-const navBlock = document.createElement("div");
+export const navBlock = document.createElement("div");
     navBlock.id = "navBlock";
 
 // Left-hand My Projects block.
-const projectBlock = document.createElement("div");
+export const projectBlock = document.createElement("div");
     projectBlock.id = "projectBlock";
 
 // Left-hand My Projects Header.
-const projectsLeftHeaderBtn = document.createElement("button");
+export const projectsLeftHeaderBtn = document.createElement("button");
     projectsLeftHeaderBtn.textContent = "My Projects";
 
-// adds projectBlock and Left My Projects header to toDoProjects array.
-toDoProjects.push(projectBlock, projectsLeftHeaderBtn);
-
-const teamBlock = document.createElement("div");
+export const teamBlock = document.createElement("div");
     teamBlock.id = "teamBlock";
 
-const teamLeftheaderBtn = document.createElement("button")
+export const teamLeftheaderBtn = document.createElement("button")
     teamLeftheaderBtn.textContent = "Team";
 
-// Initializes left hand structure for first visit.
-left.appendChild(userBlock);
-    userBlock.appendChild(defaultUser);
-
-// Appends navBlock to left-hand side and appends leftBtns array items.
-left.appendChild(navBlock);
-    navBlock.appendChild(leftBtns[0], leftBtns[1], leftBtns[2]);
-
-// Appends My Projects to left-hand navBlock with toDoProjects array items.
-left.appendChild(projectBlock);
-    projectBlock.appendChild(projectsLeftHeaderBtn);
-        projectBlock.appendChild(toDoProjects[0], toDoProjects[1],toDoProjects[2]);
-
-// Appends Teamblock with toDoTeam array items.
-left.appendChild(teamBlock)
-    teamBlock.appendChild(teamLeftHeaderBtn);    
-        teamBlock.appendChild(toDoTeam[0], toDoTeam[1], toDoTeam[2]);
-
-// Right side of web app. 
-export const right = document.querySelector("#right");
+main.appendChild(left);
 
 // Headline for Today section.
 const headlineToday = document.createElement("h1");
@@ -115,6 +101,7 @@ projectsRightHeader.id = "projectsRightHeader";
                 teamListItem.appendChild(teamListTime);
                     teamListTime.textContent = "2:00 PM";
 
+main.appendChild(right);
 
 
 
