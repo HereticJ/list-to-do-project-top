@@ -1,5 +1,6 @@
 // Creates task button.
 export const addTaskBtn = document.createElement("button");
+addTaskBtn.id = "addTaskBtn";
     addTaskBtn.textContent = "Add Task";
 
 class toDo {

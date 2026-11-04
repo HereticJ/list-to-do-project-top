@@ -148,4 +148,4 @@ What I've done so far:
 
     Wrangling modules properly with respect to index.js entry point, fixed left nav structure 
 
-    
+    Rewrote style.css to better organize left-hand navigation, working on right-hand navigation.

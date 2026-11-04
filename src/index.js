@@ -22,6 +22,7 @@ leftBtns.push(addTaskBtn, todayBtn, upcomingBtn);
 
 // Array of projects.
 export const toDoProjects = [];
+toDoProjects.id = "toDoProjects";
 
 // Default My Projects tasks.
 const projectLeftBtn1 = document.createElement("button");
