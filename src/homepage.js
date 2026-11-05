@@ -36,55 +36,51 @@ export const teamLeftheaderBtn = document.createElement("button")
     teamLeftheaderBtn.textContent = "Team";
 
 main.appendChild(left);
+main.appendChild(right);
 
 // Headline for Today section.
-const headlineToday = document.createElement("h1");
+export const headlineToday = document.createElement("h1");
 headlineToday.id = "headlineToday";
-    headlineToday.textContent = "Today";
-        right.appendChild(headlineToday);
 
 // Block for My Projects in right pane.
-const projectsRightHeader = document.createElement("h4");
+export const projectsRightHeader = document.createElement("h4");
 projectsRightHeader.id = "projectsRightHeader";
-    projectsRightHeader.textContent = "My Projects";
-        right.appendChild(projectsRightHeader);
 
-    const projectEntriesList = document.createElement("ul");
-    projectEntriesList.id = "projectList";
-        right.appendChild(projectEntriesList);
 
-        const projectListItem = document.createElement("li");
-            projectListItem.id = "projectListItem";
-            projectEntriesList.appendChild(projectListItem);
+export const projectEntriesList = document.createElement("ul");
+projectEntriesList.id = "projectList";
+    
 
-            const projectEntryCheckbox = document.createElement("input");
-                projectEntryCheckbox.setAttribute("type", "checkbox");
-                projectEntryCheckbox.id = "projectEntryCheckbox";
+export const projectListItem = document.createElement("li");
+    projectListItem.id = "projectListItem";
+        
+        const projectEntryCheckbox = document.createElement("input");
+            projectEntryCheckbox.setAttribute("type", "checkbox");
+            projectEntryCheckbox.id = "projectEntryCheckbox";
                 projectListItem.appendChild(projectEntryCheckbox);
 
-            const projectListTitle = document.createElement("h4");
-                projectListTitle.id = "projectEntryTitle";
-                projectListItem.appendChild(projectListTitle);
-                    projectListTitle.textContent = "Do 30 mins of yoga.";
+        const projectListTitle = document.createElement("h4");
+            projectListTitle.id = "projectEntryTitle";
+            projectListItem.appendChild(projectListTitle);
+                projectListTitle.textContent = "Do 30 mins of yoga.";
 
-            const projectListTime = document.createElement("p");
-                projectListTime.id = "projectTime";
-                projectListItem.appendChild(projectListTime);
-                    projectListTime.textContent = "7:30 AM";
+        const projectListTime = document.createElement("p");
+            projectListTime.id = "projectTime";
+            projectListItem.appendChild(projectListTime);
+                projectListTime.textContent = "7:30 AM";
 
-    // Block for Team(misc) in right pane.
-    const teamRightHeader = document.createElement("h4");
-    teamRightHeader.id = "teamRightHeader";
-        teamRightHeader.textContent = "Team";
-            right.appendChild(teamRightHeader);
 
-        const teamEntriesList = document.createElement("ul");
-        teamEntriesList.id = "teamList";
-            right.appendChild(teamEntriesList);
+// Block for Team(misc) in right pane.
+export const teamRightHeader = document.createElement("h4");
+teamRightHeader.id = "teamRightHeader";
 
-        const teamListItem = document.createElement("li");
-            teamListItem.id = "teamListItem";
-            teamEntriesList.appendChild(teamListItem);
+export const teamEntriesList = document.createElement("ul");
+teamEntriesList.id = "teamList";
+    
+
+    const teamListItem = document.createElement("li");
+        teamListItem.id = "teamListItem";
+        teamEntriesList.appendChild(teamListItem);
 
             const teamEntryCheckbox = document.createElement("input");
                 teamEntryCheckbox.setAttribute("type", "checkbox");

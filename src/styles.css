@@ -89,13 +89,16 @@ button {
     width: fit-content;
 }
 
+
+
+/* Right Header stuff */
+
 #headlineToday {
     display: grid;
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-/* Right Header stuff */
 #projectsRightHeader {
     display: grid;
     grid-column-start: 1;
@@ -163,9 +166,10 @@ button {
 
 #teamRightHeader {
     display: grid;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-template-rows: 1fr;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
     margin: 0;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -174,8 +178,10 @@ button {
 
 #teamList {
     display: grid;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
     border-top: 1px dotted gray;
     border-bottom: 1px dotted gray;
     padding: 0;
@@ -184,8 +190,10 @@ button {
 
 #teamListItem {
     display: grid;
-    grid-column-Start: 1;
+    grid-column-start: 1;
     grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
     grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr 1fr;
     justify-self: start;

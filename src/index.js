@@ -1,7 +1,12 @@
 import "./styles.css";
-import { form, left, navBlock, userBlock, projectBlock, teamBlock, right } from "./homepage.js";
+import { form, left, navBlock, userBlock, projectBlock, teamBlock, right,
+    headlineToday, projectsRightHeader, teamRightHeader, teamEntriesList,
+    projectEntriesList, 
+ } from "./homepage.js";
 import { addTaskBtn, projectTasks, teamTasks } from "./tasks.js";
 import { myProjectsCategory, teamCategory } from "./category.js";
+
+// LEFT
 
 // Default User name declaration.
 export const defaultUser = document.createElement("h4");
@@ -51,7 +56,26 @@ left.appendChild(projectBlock);
 };
 
 
-// Team todos.
+
+
+// RIGHT
+
+headlineToday.textContent = "Today";
+    right.appendChild(headlineToday);
+
+projectsRightHeader.textContent = "My Projects";
+    right.appendChild(projectsRightHeader);
+
+teamRightHeader.textContent = "Team";
+right.appendChild(teamRightHeader);
+
+right.appendChild(teamEntriesList);
+
+right.appendChild(projectEntriesList);
+
+
+
+// Default Team todos.
 export const toDoTeam = [];
 
 // Default Team tasks.
