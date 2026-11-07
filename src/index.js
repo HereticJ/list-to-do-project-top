@@ -1,16 +1,25 @@
 import "./styles.css";
 import { form, left, navBlock, userBlock, projectBlock, teamBlock, right,
-    headlineToday, projectsRightHeader, teamRightHeader, teamEntriesList,
-    projectEntriesList, 
+    headlineToday, projectsRightHeader, projectEntriesList, projectListItem, 
+    teamRightHeader, teamEntriesList, teamListItem
+     
  } from "./homepage.js";
 import { addTaskBtn, projectTasks, teamTasks } from "./tasks.js";
 import { myProjectsCategory, teamCategory } from "./category.js";
 
-// LEFT
+// LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT 
 
 // Default User name declaration.
 export const defaultUser = document.createElement("h4");
     defaultUser.textContent = "Default";
+
+// Initializes left hand structure for first visit.
+left.appendChild(userBlock);
+    userBlock.appendChild(defaultUser);
+
+// Array with left-hand navigation buttons.
+export const leftBtns = [];
+leftBtns.id = "leftBtns";
 
 // Left-hand Navigation buttons.
 const todayBtn = document.createElement("button");
@@ -18,12 +27,16 @@ const todayBtn = document.createElement("button");
 const upcomingBtn = document.createElement("button");
     upcomingBtn.textContent = "Upcoming";
 
-// Array with left-hand navigation buttons.
-export const leftBtns = [];
-leftBtns.id = "leftBtns";
-
 // Adds left-hand navigation buttons to leftBtns array.
 leftBtns.push(addTaskBtn, todayBtn, upcomingBtn);
+
+left.appendChild(navBlock);
+    // Appends navBlock to left-hand side and appends leftBtns array items.
+    navBlock.appendChild(leftBtns[0]);
+    navBlock.appendChild(leftBtns[1]);
+    navBlock.appendChild(leftBtns[2]);
+
+left.appendChild(projectBlock);
 
 // Array of projects.
 export const toDoProjects = [];
@@ -40,40 +53,27 @@ const projectLeftBtn3 = document.createElement("button");
     projectLeftBtn3.textContent = "Appointments";
 
 toDoProjects.push(projectLeftBtn1, projectLeftBtn2, projectLeftBtn3);
-projectBlock.appendChild(toDoProjects[0], toDoProjects[1], toDoProjects[2]);
-
-function toDoProjectsLister(toDoProjects) {
-    for (i = 0; i < toDoProjects.length; i++) {
-
-// adds projectBlock and Left My Projects header to toDoProjects array.
-toDoProjects.push(projectBlock, projectsLeftHeaderBtn);
-
-// Appends My Projects to left-hand navBlock with toDoProjects array items.
-left.appendChild(projectBlock);
-    projectBlock.appendChild(projectsLeftHeaderBtn);
-        projectBlock.appendChild(toDoProjects[0], toDoProjects[1],toDoProjects[2]);
-    }
-};
+projectBlock.appendChild(toDoProjects[0]);
+projectBlock.appendChild(toDoProjects[1]);
+projectBlock.appendChild(toDoProjects[2]);
 
 
 
 
-// RIGHT
 
-headlineToday.textContent = "Today";
-    right.appendChild(headlineToday);
-
-projectsRightHeader.textContent = "My Projects";
-    right.appendChild(projectsRightHeader);
-
-teamRightHeader.textContent = "Team";
-right.appendChild(teamRightHeader);
-
-right.appendChild(teamEntriesList);
-
-right.appendChild(projectEntriesList);
+/*
+const dProjectTask1 = new toDo("Do 30 mins of yoga", "7:30 AM", "high", 
+    "", false, "Fitness");
+const dProjectTask2 = new toDo("Dentist appointment", "10:00 AM", "high",
+     "", false, "Appointments");
+const dProjectTask3 = new toDo("Buy bread", "", "low", false, "", false,
+     "Groceries");
+*/
 
 
+
+
+left.appendChild(teamBlock);
 
 // Default Team todos.
 export const toDoTeam = [];
@@ -90,26 +90,28 @@ const teamBtn3 = document.createElement("button");
 
 toDoTeam.push(teamBtn1, teamBtn2, teamBtn3);
 
-// Initializes left hand structure for first visit.
-left.appendChild(userBlock);
-    userBlock.appendChild(defaultUser);
+// Appends teamBlock with toDoTeam array items.
+teamBlock.appendChild(toDoTeam[0]);
+teamBlock.appendChild(toDoTeam[1]);
+teamBlock.appendChild(toDoTeam[2]);
 
-left.appendChild(navBlock);
-    // Appends navBlock to left-hand side and appends leftBtns array items.
-    navBlock.appendChild(leftBtns[0]);
-    navBlock.appendChild(leftBtns[1]);
-    navBlock.appendChild(leftBtns[2]);
+// RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT
 
-left.appendChild(projectBlock);
-    projectBlock.appendChild(toDoProjects[0]);
-    projectBlock.appendChild(toDoProjects[1]);
-    projectBlock.appendChild(toDoProjects[2]);
+headlineToday.textContent = "Today";
+    right.appendChild(headlineToday);
 
-left.appendChild(teamBlock);
-    // Appends teamBlock with toDoTeam array items.
-    teamBlock.appendChild(toDoTeam[0]);
-    teamBlock.appendChild(toDoTeam[1]);
-    teamBlock.appendChild(toDoTeam[2]);
+projectsRightHeader.textContent = "My Projects";
+    right.appendChild(projectsRightHeader);
+
+right.appendChild(projectEntriesList);
+    projectEntriesList.appendChild(projectListItem);
+
+teamRightHeader.textContent = "Team";
+right.appendChild(teamRightHeader);
+
+right.appendChild(teamEntriesList);
+
+
 
 // Add Task button function to open form so users can add todos.
 addTaskBtn.addEventListener("click", addTaskForm);

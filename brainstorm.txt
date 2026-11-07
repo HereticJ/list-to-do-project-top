@@ -150,4 +150,7 @@ What I've done so far:
 
     Rewrote style.css to better organize left-hand navigation, working on right-hand navigation.
 
-    Aligned right side list items, 
+    Aligned right side list items, moving appendChild code from homepage to index.
+
+    Added button maker function to tasks.js that takes toDoArrays and automatically creates
+    buttons from each toDo's categories and subcategories.

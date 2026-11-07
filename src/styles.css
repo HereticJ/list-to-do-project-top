@@ -111,7 +111,7 @@ button {
     padding-right: 15px;
 }
 
-#projectList {
+#projectEntriesList {
     display: grid;
     grid-column-start: 1;
     grid-column-end: 2;

@@ -46,11 +46,11 @@ headlineToday.id = "headlineToday";
 export const projectsRightHeader = document.createElement("h4");
 projectsRightHeader.id = "projectsRightHeader";
 
-
+// Unordered list element for My Projects right-hand section.
 export const projectEntriesList = document.createElement("ul");
-projectEntriesList.id = "projectList";
-    
+projectEntriesList.id = "projectEntriesList";
 
+// List item for My Projects right-hand section.
 export const projectListItem = document.createElement("li");
     projectListItem.id = "projectListItem";
         
@@ -70,6 +70,7 @@ export const projectListItem = document.createElement("li");
                 projectListTime.textContent = "7:30 AM";
 
 
+
 // Block for Team(misc) in right pane.
 export const teamRightHeader = document.createElement("h4");
 teamRightHeader.id = "teamRightHeader";
@@ -77,25 +78,24 @@ teamRightHeader.id = "teamRightHeader";
 export const teamEntriesList = document.createElement("ul");
 teamEntriesList.id = "teamList";
     
+export const teamListItem = document.createElement("li");
+    teamListItem.id = "teamListItem";
+    teamEntriesList.appendChild(teamListItem);
 
-    const teamListItem = document.createElement("li");
-        teamListItem.id = "teamListItem";
-        teamEntriesList.appendChild(teamListItem);
+        const teamEntryCheckbox = document.createElement("input");
+            teamEntryCheckbox.setAttribute("type", "checkbox");
+            teamEntryCheckbox.id = "teamEntryCheckbox";
+            teamListItem.appendChild(teamEntryCheckbox);
 
-            const teamEntryCheckbox = document.createElement("input");
-                teamEntryCheckbox.setAttribute("type", "checkbox");
-                teamEntryCheckbox.id = "teamEntryCheckbox";
-                teamListItem.appendChild(teamEntryCheckbox);
+        const teamListTitle = document.createElement("h4");
+            teamListTitle.id = "teamEntryTitle";
+            teamListItem.appendChild(teamListTitle);
+                teamListTitle.textContent = "Plan user research sessions";
 
-            const teamListTitle = document.createElement("h4");
-                teamListTitle.id = "teamEntryTitle";
-                teamListItem.appendChild(teamListTitle);
-                    teamListTitle.textContent = "Plan user research sessions";
-
-            const teamListTime = document.createElement("p");
-                teamListTime.id = "teamTime";
-                teamListItem.appendChild(teamListTime);
-                    teamListTime.textContent = "2:00 PM";
+        const teamListTime = document.createElement("p");
+            teamListTime.id = "teamTime";
+            teamListItem.appendChild(teamListTime);
+                teamListTime.textContent = "2:00 PM";
 
 main.appendChild(right);
 
