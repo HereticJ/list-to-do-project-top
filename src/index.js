@@ -4,7 +4,7 @@ import { form, left, navBlock, userBlock, projectBlock, teamBlock, right,
     teamRightHeader, teamEntriesList, teamListItem
      
  } from "./homepage.js";
-import { addTaskBtn, projectTasks, teamTasks } from "./tasks.js";
+import { addTaskBtn, categoryArray, subCategoryArray, projectTasks, teamTasks } from "./tasks.js";
 import { myProjectsCategory, teamCategory } from "./category.js";
 
 // LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT 
@@ -57,22 +57,6 @@ projectBlock.appendChild(toDoProjects[0]);
 projectBlock.appendChild(toDoProjects[1]);
 projectBlock.appendChild(toDoProjects[2]);
 
-
-
-
-
-/*
-const dProjectTask1 = new toDo("Do 30 mins of yoga", "7:30 AM", "high", 
-    "", false, "Fitness");
-const dProjectTask2 = new toDo("Dentist appointment", "10:00 AM", "high",
-     "", false, "Appointments");
-const dProjectTask3 = new toDo("Buy bread", "", "low", false, "", false,
-     "Groceries");
-*/
-
-
-
-
 left.appendChild(teamBlock);
 
 // Default Team todos.
@@ -111,8 +95,6 @@ right.appendChild(teamRightHeader);
 
 right.appendChild(teamEntriesList);
 
-
-
 // Add Task button function to open form so users can add todos.
 addTaskBtn.addEventListener("click", addTaskForm);
     function addTaskForm() {
@@ -127,5 +109,6 @@ const hideForm = function hideForm() {
 hideForm();
 
 
-
+console.log(categoryArray);
+console.log(subCategoryArray);
 

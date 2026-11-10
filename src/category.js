@@ -17,6 +17,22 @@ class toDoList {
     };
 };
 
+/*
+// Makes links for categories and subcategories.
+function linkMaker(array) {
+    for (let i = 0; i < array.length; i++) {
+        const categoryLink = document.createElement("a");
+        const subCategoryLink = document.createElement("a");
+        categoryLink.textContent = array[i].category;
+        categoryArray.push(array[i].category);
+        subCategoryLink.textContent = array[i].subCategory;
+        subCategoryArray.push(array[i].subCategory);
+        categoryLink.classList.add("categoryLinks");
+        subCategoryLink.classList.add("subCategoryLinks");
+    }
+};
+*/
+
 // Default My Project task category.
 export const myProjectsCategory = new taskCategory("My Projects", [projectTasks.length]);
 export const teamCategory = new taskCategory("Team", [teamTasks.length]);

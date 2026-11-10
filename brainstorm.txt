@@ -154,3 +154,6 @@ What I've done so far:
 
     Added button maker function to tasks.js that takes toDoArrays and automatically creates
     buttons from each toDo's categories and subcategories.
+
+    Changed btnMaker to linkMaker as anchor elements are easier and more useful for
+    categories and subcategories. Starting loop to create cards which will contain visual todo data.
