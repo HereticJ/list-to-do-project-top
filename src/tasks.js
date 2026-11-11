@@ -23,14 +23,6 @@ class toDo {
     }
 };
 
-export const categoryArray = [];
-export const subCategoryArray = [];
-
-// My Project Tasks.
-export const projectTasks = [];
-projectTasks.id = "projectTasks";
-
-
 // Default My Project todo items.
 const dProjectTask1 = new toDo("Do 30 mins of yoga", "7:30 AM", "high", 
     "", false, "My Projects", "Fitness");
@@ -39,9 +31,14 @@ const dProjectTask2 = new toDo("Dentist appointment", "10:00 AM", "high",
 const dProjectTask3 = new toDo("Buy bread", "", "low", false, "", false,
      "My Projects", "Groceries");
 
+// My Project Tasks.
+export const projectTasks = [];
+projectTasks.id = "projectTasks";
 
 // Add default My Project todo items to the My Project array.
-projectTasks.push(dProjectTask1, dProjectTask2, dProjectTask3);
+projectTasks.push(dProjectTask1);
+projectTasks.push(dProjectTask2);
+projectTasks.push(dProjectTask3);
 
 // Team tasks.
 export const teamTasks = [];

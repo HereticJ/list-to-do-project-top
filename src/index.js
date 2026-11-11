@@ -2,10 +2,12 @@ import "./styles.css";
 import { form, left, navBlock, userBlock, projectBlock, teamBlock, right,
     headlineToday, projectsRightHeader, projectEntriesList, projectListItem, 
     teamRightHeader, teamEntriesList, teamListItem
-     
  } from "./homepage.js";
-import { addTaskBtn, categoryArray, subCategoryArray, projectTasks, teamTasks } from "./tasks.js";
-import { myProjectsCategory, teamCategory } from "./category.js";
+import { addTaskBtn, projectTasks, 
+    teamTasks } from "./tasks.js";
+    console.log(projectTasks[0]);
+import { myProjectsCategory, teamCategory, categoryArray, subCategoryArray, }
+ from "./category.js";
 
 // LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT 
 
@@ -38,24 +40,22 @@ left.appendChild(navBlock);
 
 left.appendChild(projectBlock);
 
-// Array of projects.
-export const toDoProjects = [];
-toDoProjects.id = "toDoProjects";
-
 // Default My Projects tasks.
-const projectLeftBtn1 = document.createElement("button");
-    projectLeftBtn1.textContent = "Fitness";
+function addNavSubCategories(array) {
+    for (let i = 0; i < Array.length; i++) {
 
-const projectLeftBtn2 = document.createElement("button");
-    projectLeftBtn2.textContent = "Groceries";
+        const subCategoryList = []
+        const subCategoryListItem = document.createElement("a")
+        subCategoryList.id = "subCategories"
+        subCategoryListItem.id = "subCategory"
+        subCategoryListItem.textContent = `${array[i].subCategory}`
+        subCategoryList.push(`${subCategoryListItem[i]}`)
+        projectBlock.appendChild(subCategoryListItem[i])
 
-const projectLeftBtn3 = document.createElement("button");
-    projectLeftBtn3.textContent = "Appointments";
+    }
+};
 
-toDoProjects.push(projectLeftBtn1, projectLeftBtn2, projectLeftBtn3);
-projectBlock.appendChild(toDoProjects[0]);
-projectBlock.appendChild(toDoProjects[1]);
-projectBlock.appendChild(toDoProjects[2]);
+addNavSubCategories(projectTasks);
 
 left.appendChild(teamBlock);
 

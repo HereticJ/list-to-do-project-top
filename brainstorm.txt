@@ -157,3 +157,6 @@ What I've done so far:
 
     Changed btnMaker to linkMaker as anchor elements are easier and more useful for
     categories and subcategories. Starting loop to create cards which will contain visual todo data.
+
+    Moved category and subcategory arrays to category.js, wrote for loop to automatically add 
+    subcategories to the left-hand navigation in index.js.

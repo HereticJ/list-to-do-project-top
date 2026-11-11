@@ -1,5 +1,5 @@
 import "./styles.css";
-import { leftBtns, defaultUser, toDoProjects, toDoTeam } from "./index.js";
+import { leftBtns, defaultUser } from "./index.js";
 import { addTaskBtn, projectTasks, teamTasks } from "./tasks.js";
 import { myProjectsCategory, teamCategory } from "./category.js";
 

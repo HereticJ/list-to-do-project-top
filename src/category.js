@@ -2,9 +2,10 @@ import { addTaskBtn, projectTasks, teamTasks } from "./tasks.js";
 
 // Creates new task categories for todo lists.
 class taskCategory {
-    constructor(categoryTitle, taskList) {
+    constructor(categoryTitle, taskList, subCategory) {
         this.categoryTitle = categoryTitle,
-        this.taskList = [taskList]
+        this.taskList = [taskList],
+        this.subCategory = subCategory
     }
 };
 
@@ -16,6 +17,20 @@ class toDoList {
         this.addTaskBtn = addTaskBtn
     };
 };
+
+export const categoryArray = [];
+export const subCategoryArray = [];
+
+// Default My Project task category.
+export const myProjectsCategory = new taskCategory("My Projects", [projectTasks.length]);
+export const teamCategory = new taskCategory("Team", [teamTasks.length]);
+
+// Creates default todo list categories.
+export const myProjectsList = new toDoList("My Projects", [2], addTaskBtn);
+export const teamList = new toDoList("Team", [2], addTaskBtn);
+
+categoryArray.push(myProjectsCategory);
+categoryArray.push(teamCategory);
 
 /*
 // Makes links for categories and subcategories.
@@ -33,10 +48,3 @@ function linkMaker(array) {
 };
 */
 
-// Default My Project task category.
-export const myProjectsCategory = new taskCategory("My Projects", [projectTasks.length]);
-export const teamCategory = new taskCategory("Team", [teamTasks.length]);
-
-// Creates default todo list categories.
-export const myProjectsList = new toDoList("My Projects", [2], addTaskBtn);
-export const teamList = new toDoList("Team", [2], addTaskBtn);
