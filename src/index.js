@@ -6,7 +6,7 @@ import { form, left, navBlock, userBlock, projectBlock, teamBlock, right,
 import { addTaskBtn, projectTasks, 
     teamTasks } from "./tasks.js";
     console.log(projectTasks[0]);
-import { myProjectsCategory, teamCategory, categoryArray, subCategoryArray, }
+import { myProjectsCategory, teamCategory, categoryArray }
  from "./category.js";
 
 // LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT 
@@ -42,20 +42,26 @@ left.appendChild(projectBlock);
 
 // Default My Projects tasks.
 function addNavSubCategories(array) {
-    for (let i = 0; i < Array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
 
-        const subCategoryList = []
         const subCategoryListItem = document.createElement("a")
-        subCategoryList.id = "subCategories"
-        subCategoryListItem.id = "subCategory"
+        subCategoryListItem.id = subCategoryListItem
+        subCategoryListItem.href = `#${array[i].subCategory}}`
         subCategoryListItem.textContent = `${array[i].subCategory}`
-        subCategoryList.push(`${subCategoryListItem[i]}`)
-        projectBlock.appendChild(subCategoryListItem[i])
+
+        /* TRYING TO AUTO ADD CATEGORY LIST ITEMS TO PRE-ESTABLISHED CATEGORIES FOR LEFT HAND NAV.
+        if (array[i].category == categoryArray[i]) {
+
+        }
+        */
+
+        projectBlock.appendChild(subCategoryListItem)
 
     }
 };
 
 addNavSubCategories(projectTasks);
+addNavSubCategories(teamTasks);
 
 left.appendChild(teamBlock);
 
@@ -110,5 +116,4 @@ hideForm();
 
 
 console.log(categoryArray);
-console.log(subCategoryArray);
 

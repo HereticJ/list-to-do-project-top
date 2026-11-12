@@ -45,8 +45,7 @@ export const teamTasks = [];
 
 // Default Team todo items.
 const dTeamTask = new toDo("Plan user resarch sessions", "2:00 PM", "high", 
-    "", false, "Website Update"
-);
+    "", false, "Team", "Website Update");
 
 teamTasks.push(dTeamTask);
 

@@ -19,7 +19,6 @@ class toDoList {
 };
 
 export const categoryArray = [];
-export const subCategoryArray = [];
 
 // Default My Project task category.
 export const myProjectsCategory = new taskCategory("My Projects", [projectTasks.length]);
@@ -32,19 +31,4 @@ export const teamList = new toDoList("Team", [2], addTaskBtn);
 categoryArray.push(myProjectsCategory);
 categoryArray.push(teamCategory);
 
-/*
-// Makes links for categories and subcategories.
-function linkMaker(array) {
-    for (let i = 0; i < array.length; i++) {
-        const categoryLink = document.createElement("a");
-        const subCategoryLink = document.createElement("a");
-        categoryLink.textContent = array[i].category;
-        categoryArray.push(array[i].category);
-        subCategoryLink.textContent = array[i].subCategory;
-        subCategoryArray.push(array[i].subCategory);
-        categoryLink.classList.add("categoryLinks");
-        subCategoryLink.classList.add("subCategoryLinks");
-    }
-};
-*/
 

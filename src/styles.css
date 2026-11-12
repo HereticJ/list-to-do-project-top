@@ -69,10 +69,14 @@ button {
     align-items: center;
 }
 
-#projectBlock button {
+#projectBlock a {
     font-size: large;
+    font-family: Arial;
+    text-decoration: none;
+    color: #000000;
     height: fit-content;
     width: fit-content;
+    padding-left: 6px;
 }
 
 #teamBlock {

@@ -1,7 +1,7 @@
 import "./styles.css";
 import { leftBtns, defaultUser } from "./index.js";
 import { addTaskBtn, projectTasks, teamTasks } from "./tasks.js";
-import { myProjectsCategory, teamCategory } from "./category.js";
+import { categoryArray, myProjectsCategory, teamCategory } from "./category.js";
 
 export const form = document.querySelector("#addTask");
 
@@ -20,6 +20,19 @@ export const userBlock = document.createElement("div");
 // Left-hand navigation elements.
 export const navBlock = document.createElement("div");
     navBlock.id = "navBlock";
+
+
+function categoryAutomator(array) {
+
+    for (i = 0; i < array.length; i++) {
+
+        const categoryName = document.createElement("h4")
+        categoryName.textContent = `${array[i].categoryTitle}`
+        navBlock.appendChild(categoryName)
+    }
+};
+
+categoryAutomator(categoryArray);
 
 // Left-hand My Projects block.
 export const projectBlock = document.createElement("div");
