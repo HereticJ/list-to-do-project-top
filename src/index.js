@@ -1,5 +1,5 @@
 import "./styles.css";
-import { form, left, navBlock, userBlock, projectBlock, teamBlock, right,
+import { form, left, navBlock, userBlock, teamBlock, right,
     headlineToday, projectsRightHeader, projectEntriesList, projectListItem, 
     teamRightHeader, teamEntriesList, teamListItem
  } from "./homepage.js";
@@ -12,7 +12,7 @@ import { myProjectsCategory, teamCategory, categoryArray }
 // LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT 
 
 // Default User name declaration.
-export const defaultUser = document.createElement("h4");
+export const defaultUser = document.createElement("h3");
     defaultUser.textContent = "Default";
 
 // Initializes left hand structure for first visit.
@@ -38,24 +38,27 @@ left.appendChild(navBlock);
     navBlock.appendChild(leftBtns[1]);
     navBlock.appendChild(leftBtns[2]);
 
-left.appendChild(projectBlock);
+function addNavCategories(array) {
+    for (let i = 0; i < array.length; i++) {
+
+        const categoryBlock = document.createElement("div")
+        categoryBlock.id = "category" + `${array[i].position}`
+        categoryBlock.textContent = `${array[i].categoryTitle}`
+        left.appendChild(categoryBlock)
+
+    }
+};
+
+addNavCategories(categoryArray);
 
 // Default My Projects tasks.
 function addNavSubCategories(array) {
     for (let i = 0; i < array.length; i++) {
 
         const subCategoryListItem = document.createElement("a")
-        subCategoryListItem.id = subCategoryListItem
+        subCategoryListItem.id = `${array[i].subCategoryListItem}`
         subCategoryListItem.href = `#${array[i].subCategory}}`
         subCategoryListItem.textContent = `${array[i].subCategory}`
-
-        /* TRYING TO AUTO ADD CATEGORY LIST ITEMS TO PRE-ESTABLISHED CATEGORIES FOR LEFT HAND NAV.
-        if (array[i].category == categoryArray[i]) {
-
-        }
-        */
-
-        projectBlock.appendChild(subCategoryListItem)
 
     }
 };
@@ -63,7 +66,14 @@ function addNavSubCategories(array) {
 addNavSubCategories(projectTasks);
 addNavSubCategories(teamTasks);
 
-left.appendChild(teamBlock);
+function appendNavLinks(array) {
+
+    if (array[i].category == `#${category1}`) {
+        category1.appendChild(subCategoryListItem)
+    } else if (array[i].category == `#${category2}`) {
+        category2.appendChild(subCategoryListItem)
+    }
+};
 
 // Default Team todos.
 export const toDoTeam = [];
@@ -114,6 +124,4 @@ const hideForm = function hideForm() {
 
 hideForm();
 
-
-console.log(categoryArray);
 

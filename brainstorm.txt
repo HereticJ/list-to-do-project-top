@@ -164,3 +164,7 @@ What I've done so far:
     Simplified loop to automatically add subcategories, added hrefs to projectBlock links 
     (not yet pointing to anything), working on a way to automatically add categories to 
     left-hand nav block.
+
+    Categories are now automatically added to left-hand navigation, working on a loop that 
+    automatically appends todo list subcategories to the appropriate category and displays 
+    them as links in the left-hand navigation.

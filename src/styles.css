@@ -61,7 +61,7 @@ button {
     color: red;
 }
 
-#projectBlock {
+#category1 {
     display: grid;
     grid-template-rows: repeat (3, 33%);
     height: 70px;

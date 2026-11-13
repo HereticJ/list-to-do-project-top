@@ -21,7 +21,7 @@ export const userBlock = document.createElement("div");
 export const navBlock = document.createElement("div");
     navBlock.id = "navBlock";
 
-
+/*
 function categoryAutomator(array) {
 
     for (i = 0; i < array.length; i++) {
@@ -33,10 +33,10 @@ function categoryAutomator(array) {
 };
 
 categoryAutomator(categoryArray);
+*/
 
 // Left-hand My Projects block.
-export const projectBlock = document.createElement("div");
-    projectBlock.id = "projectBlock";
+export const category1Block = document.createElement("div");
 
 // Left-hand My Projects Header.
 export const projectsLeftHeaderBtn = document.createElement("button");
